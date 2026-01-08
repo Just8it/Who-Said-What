@@ -1,0 +1,7 @@
+ebooklib
+beautifulsoup4
+pydantic
+openai
+tqdm
+ipykernel
+python-dotenv

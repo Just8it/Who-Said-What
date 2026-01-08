@@ -1,0 +1,79 @@
+{
+    "book_title": "Dungeon Crawler Carl",
+    "pov_type": "first_person",
+    "pov_character": "Carl",
+    "characters": {
+        "Carl": {
+            "description": "Protagonist. A pragmatic and slightly cynical former Coast Guard. He is resourceful and direct. Often wears boxers/Crocs.",
+            "voice_signature": "Frustrated, Tired, Sarcastic",
+            "aliases": [
+                "Me",
+                "I",
+                "Carl",
+                "Crawler Carl"
+            ],
+            "last_seen": 4,
+            "evolving_description": "Carl is disoriented and isolated, expressing confusion about his surroundings and the apparent emptiness of a once-populous city. He seems to be grappling with the sudden, drastic change in his environment."
+        },
+        "Donut": {
+            "description": "Persian Cat. Haughty, demanding, upper-crust. Prize-winning show cat. Carl's companion.",
+            "voice_signature": "Whining, Haughty, Demanding",
+            "aliases": [
+                "Princess Donut",
+                "The Cat",
+                "Donut"
+            ],
+            "last_seen": 10,
+            "evolving_description": "Donut is taking charge, formulating plans, and demonstrating a proactive, albeit somewhat audacious, approach to their predicament. She's focused on making a significant impact within a tight deadline."
+        },
+        "Narrator": {
+            "description": "Describes actions and scenes.",
+            "voice_signature": "Neutral, Descriptive",
+            "aliases": [],
+            "last_seen": 4,
+            "evolving_description": "The Narrator is observant and reflective, noting architectural details and making pop culture comparisons. He experiences physical sensations intensely and is surprised by unexpected system interfaces, indicating a new and disorienting reality."
+        },
+        "Mrs. Parsons": {
+            "description": "A neighbor who is initially confused and concerned about the noise and commotion outside her home.",
+            "voice_signature": "Concerned, Confused",
+            "aliases": [],
+            "last_seen": 3,
+            "evolving_description": "An elderly woman, easily disturbed by noise, who recognizes Carl. She appears to be a neighbor, concerned about disturbances but also familiar enough to address Carl directly."
+        },
+        "Mordecai": {
+            "description": "Mordecai is a disgruntled, isolated, and observant gatekeeper who feels overlooked and nostalgic for past routines.",
+            "voice_signature": "Unknown",
+            "aliases": [],
+            "last_seen": 4,
+            "evolving_description": "Mordecai is a territorial and suspicious individual, initially hostile towards perceived intruders. He shows a surprising shift to recognition and perhaps awe upon identifying the Narrator as a 'crawler,' suggesting a deeper understanding of the world's unique inhabitants."
+        },
+        "Tally": {
+            "description": "Tally is a food vendor, possibly a chef, in a dungeon.",
+            "voice_signature": "Unknown",
+            "aliases": [],
+            "last_seen": 16,
+            "evolving_description": "Tally is a compassionate and observant individual, deeply affected by the suffering he witnesses. He expresses strong disapproval of manipulative tactics and violence, indicating a moral compass that values life and fairness."
+        },
+        "Goblin": {
+            "description": "Arrogant, mocking, and defiant. Speaks with superiority, taunting enemies with sharp, insulting wit.",
+            "voice_signature": "Unknown",
+            "aliases": [],
+            "last_seen": 8,
+            "evolving_description": "This Goblin is critical and judgmental, particularly towards Carl's appearance and choices. She possesses a 'sultry yet pompous' tone, suggesting a sense of superiority and a sharp, albeit snarky, wit."
+        },
+        "System AI": {
+            "description": "**Identity/Role of 'System':**\nNeutral, automated interface managing dungeon mechanics, notifications, and player interactions, it discribes dungeon events and actions. It is not a character but a system that controls the game. reads achievements and rewards.",
+            "voice_signature": "Unknown",
+            "aliases": [
+                "Announcement",
+                "System",
+                "System AI",
+                "AI",
+                "Robotic Voice"
+            ],
+            "last_seen": 4,
+            "evolving_description": "The System AI acts as an objective, informative entity, providing crucial data like time limits and species descriptions. It appears to be an integral part of the new, game-like reality the characters inhabit."
+        }
+    },
+    "__path__": "book_config_dcc.json"
+}

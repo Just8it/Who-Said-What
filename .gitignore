@@ -1,0 +1,16 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Project Specific
+Runs/
+*.epub
+test_book.epub
+
+# Notebook checkpoints
+.ipynb_checkpoints/

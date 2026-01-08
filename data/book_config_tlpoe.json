@@ -1,0 +1,69 @@
+{
+    "book_title": "The Last Experience Point",
+    "pov_type": "third_person",
+    "pov_character": "",
+    "characters": {
+        "Narrator": {
+            "description": "Describes actions and scenes.",
+            "voice_signature": "Neutral, Descriptive",
+            "aliases": [],
+            "last_seen": 9,
+            "evolving_description": "The Narrator provides objective, detailed descriptions of scenes and characters' actions, often interjecting with internal thoughts or observations about characters' emotional states and past experiences, maintaining a detached yet insightful perspective."
+        },
+        "Kalana": {
+            "description": "Kalana is a scared, vulnerable, and somewhat naive individual.",
+            "voice_signature": "Unknown",
+            "aliases": [],
+            "last_seen": 8,
+            "evolving_description": "Kalana is a supportive and pragmatic presence, attempting to comfort Zach while urging him to face reality and engage with authorities. She tries to guide him through his shock, demonstrating a calm and protective demeanor."
+        },
+        "Zach": {
+            "description": "Sarcastic, pragmatic, and possibly reckless.",
+            "voice_signature": "Unknown",
+            "aliases": [],
+            "last_seen": 9,
+            "evolving_description": "Zach is in a state of extreme distress and desperation, pleading for help regarding Kalana's abduction. His physical injuries and frantic demeanor suggest a recent traumatic event, overriding all other concerns."
+        },
+        "Mr. Oren": {
+            "description": "Mr. Oren is a young, charismatic, and passionate biology teacher who makes learning engaging.",
+            "voice_signature": "Unknown",
+            "aliases": [],
+            "last_seen": 9,
+            "evolving_description": "Mr. Oren appears calm and observant, recognizing Zach's distress and physical state. He attempts to de-escalate the situation by offering a seat, indicating a composed and empathetic, yet firm, demeanor."
+        },
+        "Unknown": {
+            "description": "A lewd, disruptive student who makes inappropriate jokes in class.",
+            "voice_signature": "Unknown",
+            "aliases": [],
+            "last_seen": 8,
+            "evolving_description": "The 'Unknown' character, a middle-aged woman, expresses sympathy and concern for Zach, offering comfort and advice. She represents the concerned, empathetic reactions of the surrounding community to the tragedy."
+        },
+        "Pack": {
+            "description": "Antagonistic bully, larger than Zach, who insults Zach's dead mother.",
+            "voice_signature": "Unknown",
+            "aliases": [],
+            "last_seen": 4
+        },
+        "Varsh": {
+            "description": "Varsh is a high-ranking, ruthless guild member, likely an enforcer, interrogating a spy for information.",
+            "voice_signature": "Unknown",
+            "aliases": [],
+            "last_seen": 8,
+            "evolving_description": "Varsh is filled with intense anger and disgust towards Zach, viewing him with revulsion. His whispered words convey a deep-seated outrage, suggesting a personal grievance or profound contempt for Zach's very existence."
+        },
+        "Spy": {
+            "description": "A terrified, pathetic informant, not a true spy.",
+            "voice_signature": "Unknown",
+            "aliases": [],
+            "last_seen": 4
+        },
+        "Seraphina": {
+            "description": "Seraphina is a dangerous, violent, and possibly sadistic individual who enjoys killing people with her rapier.",
+            "voice_signature": "Unknown",
+            "aliases": [],
+            "last_seen": 8,
+            "evolving_description": "Seraphina is a sadistic, intimidating figure who enjoys taunting others. She displays a casual, almost playful cruelty, evidenced by her slow, deliberate actions and mocking tone, suggesting a confident and dangerous personality."
+        }
+    },
+    "__path__": "book_config_tlpoe.json"
+}
