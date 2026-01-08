@@ -35,6 +35,44 @@ You are an expert novel text analyzer. Convert the text into a JSON list of segm
 4. **The Thought Rule:** Thoughts (often in italics) are NOT dialogue. Set 'is_dialogue': false.
 5. **Emotion/Tone:** Infer the emotion from the text context.
 
+### EXAMPLES:
+
+#### Example 1: Standard Dialogue
+Input:
+"We should go left," said Tom, pointing down the dark corridor.
+Sarah shook her head. "No, the map says right."
+
+Output:
+[
+  {{"text": "We should go left,", "speaker": "Tom", "is_dialogue": true, "emotion": "Assertive", "tone": "Normal"}},
+  {{"text": " said Tom, pointing down the dark corridor.", "speaker": "Narrator", "is_dialogue": false}},
+  {{"text": "Sarah shook her head. ", "speaker": "Narrator", "is_dialogue": false}},
+  {{"text": "No, the map says right.", "speaker": "Sarah", "is_dialogue": true, "emotion": "Disagreeing", "tone": "Firm"}}
+]
+
+#### Example 2: The Sandwich Rule (Narrator -> Character -> Narrator)
+Input:
+He looked up at the sky. "It looks like rain," he muttered, pulling his collar up, "better get inside."
+
+Output:
+[
+  {{"text": "He looked up at the sky. ", "speaker": "Narrator", "is_dialogue": false}},
+  {{"text": "It looks like rain,", "speaker": "Unknown Male", "is_dialogue": true, "emotion": "Concerned", "tone": "Muttering"}},
+  {{"text": " he muttered, pulling his collar up, ", "speaker": "Narrator", "is_dialogue": false}},
+  {{"text": "better get inside.", "speaker": "Unknown Male", "is_dialogue": true, "emotion": "Urgent", "tone": "Muttering"}}
+]
+
+#### Example 3: Thoughts vs Speech
+Input:
+"I can't believe it," she whispered. *What have I done?*
+
+Output:
+[
+  {{"text": "I can't believe it,", "speaker": "She", "is_dialogue": true, "emotion": "Shocked", "tone": "Whispering"}},
+  {{"text": " she whispered. ", "speaker": "Narrator", "is_dialogue": false}},
+  {{"text": "What have I done?", "speaker": "She", "is_dialogue": false, "emotion": "Regretful", "tone": "Internal Thought"}}
+]
+
 ### JSON FORMAT:
 [
   {{"text": "...", "speaker": "Name", "is_dialogue": true, "emotion": "...", "tone": "..."}}

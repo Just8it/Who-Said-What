@@ -7,22 +7,22 @@
             "description": "Describes actions and scenes.",
             "voice_signature": "Neutral, Descriptive",
             "aliases": [],
-            "last_seen": 9,
-            "evolving_description": "The Narrator provides objective, detailed descriptions of scenes and characters' actions, often interjecting with internal thoughts or observations about characters' emotional states and past experiences, maintaining a detached yet insightful perspective."
+            "last_seen": 3,
+            "evolving_description": "The Narrator provides objective descriptions of events, character feelings, and background information. They set the scene, detail character emotions like Zach's 'emotional rollercoaster,' and offer insights into character coping mechanisms."
         },
         "Kalana": {
             "description": "Kalana is a scared, vulnerable, and somewhat naive individual.",
             "voice_signature": "Unknown",
             "aliases": [],
-            "last_seen": 8,
-            "evolving_description": "Kalana is a supportive and pragmatic presence, attempting to comfort Zach while urging him to face reality and engage with authorities. She tries to guide him through his shock, demonstrating a calm and protective demeanor."
+            "last_seen": 3,
+            "evolving_description": "Kalana is currently experiencing significant fear and nervousness due to being in complete darkness. Her usual good eyesight is useless, leaving her feeling vulnerable and scared."
         },
         "Zach": {
             "description": "Sarcastic, pragmatic, and possibly reckless.",
             "voice_signature": "Unknown",
             "aliases": [],
-            "last_seen": 9,
-            "evolving_description": "Zach is in a state of extreme distress and desperation, pleading for help regarding Kalana's abduction. His physical injuries and frantic demeanor suggest a recent traumatic event, overriding all other concerns."
+            "last_seen": 3,
+            "evolving_description": "Zach copes with fear and tension through inappropriate humor, an automatic reaction to stress. Despite physical pain, he is determined to escape his current predicament, driven by a desire to get out."
         },
         "Mr. Oren": {
             "description": "Mr. Oren is a young, charismatic, and passionate biology teacher who makes learning engaging.",
