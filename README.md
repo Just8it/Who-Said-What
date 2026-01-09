@@ -47,8 +47,6 @@ We utilize a **Hybrid Pipeline** combining strict logic with state-of-the-art AI
     * Open `tts_pipeline.ipynb`.
     * Adjust the **USER CONFIGURATION** cell (Model, Batch Start/End).
     * Run All.
-3. **Sync**:
-    * Use `python scripts/push_release.py` to push changes to both Public and Private repositories simultaneously.
 
 ## 🤖 Models
 
