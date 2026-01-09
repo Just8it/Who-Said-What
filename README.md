@@ -1,81 +1,58 @@
-# BTAB: Advanced Speaker Separation & Enrichment Pipeline
+# BTAB: Advanced Speaker Separation & Enrichment Pipeline (V2)
 
 ## Overview
 
 This project processes raw EPUB files into structured, speaker-attributed JSON data suitable for high-quality Text-to-Speech (TTS) generation. By leveraging advanced Large Language Models (LLMs) and a hybrid "Logic + AI" architecture, we achieve high-accuracy diarization, emotion tagging, and consistent character voice tracking across entire novels.
 
-## 🚀 Current Architecture & Models
+## 🚀 Key Features (V2)
 
-We currently utilize a **Hybrid Pipeline** that combines strict robust code logic with state-of-the-art AI models.
+We utilize a **Hybrid Pipeline** combining strict logic with state-of-the-art AI models.
 
-### Paid Models
+### 🧠 Intelligence & Accuracy
 
-* **Primary Model**: `google/gemini-2.5-flash` (via OpenRouter)
-  * **Why?**: Selected for its massive context window (crucial for processing full chapters at once), low latency, and extreme cost-efficiency compared to GPT-4o or Claude 3.5 Sonnet.
+* **Few-Shot Prompting**: System prompts include "Perfect Examples" to handle edge cases like "Sandwiched Dialogue" and "Internal Thoughts" with high precision.
+* **Integrity Monitor (Safety Net)**: A passive guardrail that compares input text vs. output JSON. If the AI hallucinates or drops a paragraph, it triggers a `[WARNING]` so you never lose data.
+* **Automated Retry Logic**: Networks fail. Our system automatically retries API calls with exponential backoff before skipping a chapter.
 
-### Core Components
+### ⚡ Speed & Efficiency
 
-1. **Ingestion (`EpubLoader`)**: Extracts and cleans raw text from `.epub` files, handling HTML parsing and formatting.
-2. **Context Engine (`CharacterManager`)**:
-    * Maintains a persistent database of characters (`book_config.json`).
-    * Generates **Dynamic Context Headers** for each chapter, telling the LLM exactly *who* is likely to appear based on recent narrative flow (Recency Bias).
-    * **Self-Healing**: Automatically detects new characters, generates profiles for them, and updates the database ("Enrichment Cycle").
-3. **Diarization Engine (`LLMHandler`)**: Sends chapter text to Gemini with specific "Sandwich," "Quote," and "Thought" rules to strictly separate dialogue from narration.
-4. **Sanpshot Logic (`OutputJanitor`)**: A regex-based post-processor that fixes malformed JSON, trims overlapping text hallucinations, and ensures data integrity before saving.
+* **Sequential Optimization (Async Enrichment)**:
+  * **Old Way**: Generate Ch 1 -> Wait for DB Update -> Generate Ch 2.
+  * **New Way**: Generate Ch 1 -> **Immediately** Generate Ch 2 (while Ch 1 DB updates in background).
+  * *Result: ~30-50% faster batch processing.*
+* **Cost Monitoring**: Real-time tracking of API usage with a configurable "Circuit Breaker" limit (e.g., stopping if cost > $2.00).
 
-## 🛠️ Setup & Installation
+### 🛠️ User Experience
 
-### Prerequisites
-
-* Python 3.10+
-* An [OpenRouter](https://openrouter.ai/) API Key
-
-### Installation
-
-1. **Clone the repository**:
-
-    ```bash
-    git clone <repo-url>
-    cd speaker-separation
-    ```
-
-2. **Install Dependencies**:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. **Environment Setup**:
-    Create a `.env` file in the root directory:
-
-    ```env
-    OPENROUTER_API_KEY=sk-or-your-api-key-here
-    ```
-
-## 🏃 Usage
-
-The primary workflow is managed via the **Jupyter Notebook** for interactive visibility.
-
-1. **Place your EPUB**:
-    Put your target `.epub` file in the `data/` directory.
-
-2. **Launch the Pipeline**:
-    Open `tts_pipeline.ipynb` in VS Code or Jupyter Lab.
-
-    * **Step 1**: Run the Setup & Config cells to initialize logging (`Runs/` directory).
-    * **Step 2**: The `EpubLoader` will parse your book.
-    * **Step 3**: Configure the batch range (e.g., Chapters 3 to 10) and Run.
-
-3. **Monitor Output**:
-    * **Terminal/Output**: Real-time logs showing cost usage, character updates, and processing speed.
-    * **`Runs/` Directory**: Contains the generated JSON files (e.g., `chapter_003_title.json`) and full logs.
+* **Progress Dashboard**: sleek `tqdm` progress bar showing ETA per chapter and total batch completion.
+* **Centralized Configuration**: All settings (Model Name, Batch Range, API Keys) are managed in a single cell at the top of the Notebook.
 
 ## 📂 Project Structure
 
-* `src/`: Core logic modules.
-  * `llm_handler.py`: Interface for OpenRouter/Gemini.
-  * `character_manager.py`: Logic for tracking and enriching character personas.
-  * `book_processor.py`: Pydantic models (`Segment`, `Chapter`) and EPUB handling.
-  * `pipeline_utils.py`: Prompts, Cost Monitoring, and Cleaning logic.
-* `data/`: Input books and the persistent `book_config.json`.
-* `Runs/`: Output directory for every execution session (git-ignored).
+* `src/`
+  * `llm_handler.py`: Interface for OpenRouter/Gemini with Retry Logic.
+  * `character_manager.py`: Tracks personas. Handles **Async Enrichment** in background threads.
+  * `pipeline_utils.py`: Contains `PromptFactory`, `CostMonitor`, and the new **`IntegrityMonitor`**.
+  * `book_processor.py`: EPUB parsing logic.
+* `data/`: Input books and persistent `book_config.json`.
+* `Runs/`: JSON outputs and logs.
+* `scripts/`: Maintenance tools (e.g., `push_release.py` for mirroring).
+
+## 🏃 Usage
+
+1. **Setup**:
+    * Install requirements: `pip install -r requirements.txt`
+    * Set `OPENROUTER_API_KEY` in `.env`.
+2. **Run**:
+    * Open `tts_pipeline.ipynb`.
+    * Adjust the **USER CONFIGURATION** cell (Model, Batch Start/End).
+    * Run All.
+3. **Sync**:
+    * Use `python scripts/push_release.py` to push changes to both Public and Private repositories simultaneously.
+
+## 🤖 Models
+
+* **Primary**: `google/gemini-2.5-flash` (via OpenRouter) - Chosen for high context, low cost, and reliable JSON adherence.
+
+---
+*Maintained by Just8it*
