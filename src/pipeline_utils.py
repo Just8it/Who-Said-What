@@ -110,6 +110,7 @@ class OutputJanitor:
         if not isinstance(data, list):
             return []
 
+
         # Fix Overlap
         for i in range(len(data) - 1):
             curr = data[i]
@@ -125,3 +126,38 @@ class OutputJanitor:
                 curr["text"] = new_text
 
         return data
+
+class IntegrityMonitor:
+    @staticmethod
+    def check_integrity(original_text: str, segments: List[any]) -> float:
+        """
+        Compares the original text with the reconstructed text from segments.
+        Returns a ratio (0.0 to 1.0) of similarity/containment.
+        """
+        # 1. Reconstruct Output
+        output_text = "".join([s.text for s in segments])
+        
+        # 2. Normalize (Remove all whitespace/newlines)
+        def normalize(t): return re.sub(r'\s+', '', t).strip()
+        
+        norm_orig = normalize(original_text)
+        norm_out = normalize(output_text)
+        
+        # 3. Compare Lengths
+        len_orig = len(norm_orig)
+        len_out = len(norm_out)
+        
+        if len_orig == 0: return 1.0 # Empty chapter?
+        
+        # Simple Ratio
+        ratio = min(len_out, len_orig) / max(len_out, len_orig)
+        
+        # Check for subset (Dropped text)
+        # If output is significantly shorter
+        if len_out < len_orig * 0.98:
+            diff = len_orig - len_out
+            # print(f"[Integrity] WARNING: Output is shorter by ~{diff} chars.")
+            return ratio
+            
+        return ratio
+

@@ -8,28 +8,28 @@
             "voice_signature": "Neutral, Descriptive",
             "aliases": [],
             "last_seen": 3,
-            "evolving_description": "The Narrator provides objective scene-setting and character insight, detailing Zach's emotional rollercoaster and coping mechanisms, while also marking chapter divisions."
+            "evolving_description": "The Narrator provides detailed insights into Zach's emotional state, highlighting his rapid shift from euphoria to terror and his internal struggle with newfound power and identity."
         },
         "Kalana": {
             "description": "Kalana is a scared, vulnerable, and somewhat naive individual.",
             "voice_signature": "Unknown",
             "aliases": [],
             "last_seen": 3,
-            "evolving_description": "Kalana is currently experiencing intense fear and vulnerability, openly admitting her terror in the face of complete darkness and an unknown, potentially endless, underground cavern."
+            "evolving_description": "Kalana is currently overwhelmed by fear and vulnerability, expressing her terror openly in the face of complete darkness and an unknown, potentially endless journey."
         },
         "Zach": {
             "description": "Sarcastic, pragmatic, and possibly reckless.",
             "voice_signature": "Unknown",
             "aliases": [],
             "last_seen": 3,
-            "evolving_description": "Zach is currently overwhelmed by fear and stress, resorting to dark humor as a coping mechanism, and is determined to escape his dire situation despite physical pain."
+            "evolving_description": "Zach is coping with fear and pain through dark humor and an automatic, facetious response to stress. He is determined to escape, despite his physical discomfort and the daunting circumstances."
         },
         "Mr. Oren": {
             "description": "Mr. Oren is a young, charismatic, and passionate biology teacher who makes learning engaging.",
             "voice_signature": "Unknown",
             "aliases": [],
             "last_seen": 4,
-            "evolving_description": "Mr. Oren is an eccentric and intelligent teacher, passionate about his subject, and has a unique, almost contradictory, personal appearance."
+            "evolving_description": "Mr. Oren is an eccentric and highly intelligent teacher, passionate about his subject matter, and capable of engaging students with complex, albeit unusual, scientific concepts."
         },
         "Unknown": {
             "description": "A lewd, disruptive student who makes inappropriate jokes in class.",
@@ -43,14 +43,14 @@
             "voice_signature": "Unknown",
             "aliases": [],
             "last_seen": 4,
-            "evolving_description": "Pack is a provocative and crude individual, seemingly enjoying shocking others with inappropriate comments, and is not afraid to instigate conflict."
+            "evolving_description": "Pack is a provocative and crude individual, not afraid to make inappropriate comments, which often leads to confrontation and physical altercations with others, particularly Zach."
         },
         "Varsh": {
             "description": "Varsh is a high-ranking, ruthless guild member, likely an enforcer, interrogating a spy for information.",
             "voice_signature": "Unknown",
             "aliases": [],
             "last_seen": 4,
-            "evolving_description": "Varsh is a demanding and somewhat intimidating figure, quick to anger when his expectations aren't met, and is capable of physical threats."
+            "evolving_description": "Varsh is a demanding and ruthless leader, quick to resort to threats and violence to extract information. He is focused on his objectives and dismissive of those he deems weak or useless."
         },
         "Spy": {
             "description": "A terrified, pathetic informant, not a true spy.",
@@ -63,13 +63,14 @@
             "voice_signature": "Unknown",
             "aliases": [],
             "last_seen": 4,
-            "evolving_description": "Seraphina is a bloodthirsty and eager individual, finding joy in violence and displaying a keen interest in her weapon and potential victims."
+            "evolving_description": "Seraphina is a bloodthirsty and aggressive character who enjoys violence, particularly beheading. She is also quick to react and protective of information, showing a strong, assertive personality."
         },
         "Unknown Male": {
             "description": "A student, possibly a friend of Zach, encouraging a fight.",
             "voice_signature": "Unknown",
             "aliases": [],
-            "last_seen": 4
+            "last_seen": 4,
+            "evolving_description": "The Unknown Male is a disruptive and instigating student, actively encouraging a fight between Zach and Pack, demonstrating a desire for conflict and entertainment."
         }
     },
     "__path__": "book_config_tlpoe.json"

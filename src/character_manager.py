@@ -1,6 +1,7 @@
 import json
 import os
 import re
+import threading
 from typing import List, Dict, Any, Optional
 from book_processor import Segment
 
@@ -18,6 +19,7 @@ class CharacterManager:
         self.config = self._load_config()
         self._ensure_structure()
         self.characters = self.config.get("characters", {}) # Helper ref
+        self._lock = threading.Lock() # Thread safety for file writes
 
     def _load_config(self) -> Dict[str, Any]:
         if os.path.exists(self.config_path):
@@ -39,9 +41,10 @@ class CharacterManager:
 
     def save_config(self):
         """Persists the current state to JSON."""
-        self.config["characters"] = self.characters
-        with open(self.config_path, 'w', encoding='utf-8') as f:
-            json.dump(self.config, f, indent=4)
+        with self._lock:
+            self.config["characters"] = self.characters
+            with open(self.config_path, 'w', encoding='utf-8') as f:
+                json.dump(self.config, f, indent=4)
 
     def get_dynamic_prompt_header(self, text_chunk: str) -> str:
         """
@@ -104,6 +107,15 @@ class CharacterManager:
         
         if changes_made:
             self.save_config()
+
+    def enrich_db_async(self, llm_client, recent_segments: List[Segment], model: str):
+        """
+        Runs enrich_db in a background thread to allow the pipeline to proceed.
+        Returns the Thread object.
+        """
+        t = threading.Thread(target=self.enrich_db, args=(llm_client, recent_segments, model))
+        t.start()
+        return t
 
     def enrich_db(self, llm_client, recent_segments: List[Segment], model: str):
         """

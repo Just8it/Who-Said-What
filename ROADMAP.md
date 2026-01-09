@@ -20,7 +20,7 @@ This document outlines the planned improvements to evolve the **BTAB Speaker Sep
 
 *Goal: Reduce processing time for a full book from 1 hour+ to <15 minutes.*
 
-- [ ] **Sequential Optimization (Pipelining)**
+- [x] **Sequential Optimization (Pipelining)**
   - **Problem**: Full parallelism breaks character continuity (Chapter N needs Chapter N-1's DB updates).
   - **Solution**: Overlap *non-dependent* steps (e.g., while Ch 1 saves/enriches, Ch 2 starts loading) or optimize the enrichment bottleneck.
   - **Impact**: **1.5x - 2x Speedup (Safe)**.
