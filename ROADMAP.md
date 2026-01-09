@@ -20,10 +20,10 @@ This document outlines the planned improvements to evolve the **BTAB Speaker Sep
 
 *Goal: Reduce processing time for a full book from 1 hour+ to <15 minutes.*
 
-- [ ] **Parallel Processing (AsyncIO)**
-  - **Problem**: Chapters are processed concurrently (1 at a time).
-  - **Solution**: Implement `asyncio` to process batches of chapters (e.g., 5 chapters at once).
-  - **Impact**: **5x - 10x Speedup**.
+- [ ] **Sequential Optimization (Pipelining)**
+  - **Problem**: Full parallelism breaks character continuity (Chapter N needs Chapter N-1's DB updates).
+  - **Solution**: Overlap *non-dependent* steps (e.g., while Ch 1 saves/enriches, Ch 2 starts loading) or optimize the enrichment bottleneck.
+  - **Impact**: **1.5x - 2x Speedup (Safe)**.
 
 - [ ] **Smart Caching**
   - **Problem**: Re-running a chapter (e.g., to fix one typo) costs money again.
@@ -33,9 +33,9 @@ This document outlines the planned improvements to evolve the **BTAB Speaker Sep
 
 *Goal: Make the tool easier to configure and monitor.*
 
-- [ ] **Centralized Configuration**
+- [x] **Centralized Configuration**
   - Move all "hardcoded" toggles (model name, batch size, cost limits) to a single `config.yaml` or the top of the Notebook.
-- [ ] **Progress Dashboard**
+- [x] **Progress Dashboard**
   - Replace text logs with a simple `tqdm` progress bar for the entire book batch.
 
 ## Phase 4: 🤖 Advanced Features (Exploratory)

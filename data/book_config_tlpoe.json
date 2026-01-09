@@ -8,28 +8,28 @@
             "voice_signature": "Neutral, Descriptive",
             "aliases": [],
             "last_seen": 3,
-            "evolving_description": "The Narrator provides objective descriptions of events, character feelings, and background information. They set the scene, detail character emotions like Zach's 'emotional rollercoaster,' and offer insights into character coping mechanisms."
+            "evolving_description": "The Narrator provides objective scene-setting and character insight, detailing Zach's emotional rollercoaster and coping mechanisms, while also marking chapter divisions."
         },
         "Kalana": {
             "description": "Kalana is a scared, vulnerable, and somewhat naive individual.",
             "voice_signature": "Unknown",
             "aliases": [],
             "last_seen": 3,
-            "evolving_description": "Kalana is currently experiencing significant fear and nervousness due to being in complete darkness. Her usual good eyesight is useless, leaving her feeling vulnerable and scared."
+            "evolving_description": "Kalana is currently experiencing intense fear and vulnerability, openly admitting her terror in the face of complete darkness and an unknown, potentially endless, underground cavern."
         },
         "Zach": {
             "description": "Sarcastic, pragmatic, and possibly reckless.",
             "voice_signature": "Unknown",
             "aliases": [],
             "last_seen": 3,
-            "evolving_description": "Zach copes with fear and tension through inappropriate humor, an automatic reaction to stress. Despite physical pain, he is determined to escape his current predicament, driven by a desire to get out."
+            "evolving_description": "Zach is currently overwhelmed by fear and stress, resorting to dark humor as a coping mechanism, and is determined to escape his dire situation despite physical pain."
         },
         "Mr. Oren": {
             "description": "Mr. Oren is a young, charismatic, and passionate biology teacher who makes learning engaging.",
             "voice_signature": "Unknown",
             "aliases": [],
-            "last_seen": 9,
-            "evolving_description": "Mr. Oren appears calm and observant, recognizing Zach's distress and physical state. He attempts to de-escalate the situation by offering a seat, indicating a composed and empathetic, yet firm, demeanor."
+            "last_seen": 4,
+            "evolving_description": "Mr. Oren is an eccentric and intelligent teacher, passionate about his subject, and has a unique, almost contradictory, personal appearance."
         },
         "Unknown": {
             "description": "A lewd, disruptive student who makes inappropriate jokes in class.",
@@ -42,14 +42,15 @@
             "description": "Antagonistic bully, larger than Zach, who insults Zach's dead mother.",
             "voice_signature": "Unknown",
             "aliases": [],
-            "last_seen": 4
+            "last_seen": 4,
+            "evolving_description": "Pack is a provocative and crude individual, seemingly enjoying shocking others with inappropriate comments, and is not afraid to instigate conflict."
         },
         "Varsh": {
             "description": "Varsh is a high-ranking, ruthless guild member, likely an enforcer, interrogating a spy for information.",
             "voice_signature": "Unknown",
             "aliases": [],
-            "last_seen": 8,
-            "evolving_description": "Varsh is filled with intense anger and disgust towards Zach, viewing him with revulsion. His whispered words convey a deep-seated outrage, suggesting a personal grievance or profound contempt for Zach's very existence."
+            "last_seen": 4,
+            "evolving_description": "Varsh is a demanding and somewhat intimidating figure, quick to anger when his expectations aren't met, and is capable of physical threats."
         },
         "Spy": {
             "description": "A terrified, pathetic informant, not a true spy.",
@@ -61,8 +62,14 @@
             "description": "Seraphina is a dangerous, violent, and possibly sadistic individual who enjoys killing people with her rapier.",
             "voice_signature": "Unknown",
             "aliases": [],
-            "last_seen": 8,
-            "evolving_description": "Seraphina is a sadistic, intimidating figure who enjoys taunting others. She displays a casual, almost playful cruelty, evidenced by her slow, deliberate actions and mocking tone, suggesting a confident and dangerous personality."
+            "last_seen": 4,
+            "evolving_description": "Seraphina is a bloodthirsty and eager individual, finding joy in violence and displaying a keen interest in her weapon and potential victims."
+        },
+        "Unknown Male": {
+            "description": "A student, possibly a friend of Zach, encouraging a fight.",
+            "voice_signature": "Unknown",
+            "aliases": [],
+            "last_seen": 4
         }
     },
     "__path__": "book_config_tlpoe.json"
